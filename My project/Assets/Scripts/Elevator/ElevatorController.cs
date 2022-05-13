@@ -13,7 +13,7 @@ public class ElevatorController : MonoBehaviour
 
     private bool isMoving = false;
 
-    public event Action OnFloorChanged;
+    public event Action<int> OnFloorChanged;
     public event Action OnStartMoving;
     public event Action OnStopMoving;
      
@@ -23,6 +23,10 @@ public class ElevatorController : MonoBehaviour
     {
         ElevatorButton.OnButtonPressed += ElevatorButton_OnButtonPressed;
         rb = GetComponent<Rigidbody>();
+    }
+    private void OnDestroy()
+    {
+        ElevatorButton.OnButtonPressed -= ElevatorButton_OnButtonPressed;
     }
 
     private void ElevatorButton_OnButtonPressed(int floor)
@@ -80,7 +84,7 @@ public class ElevatorController : MonoBehaviour
             {
                 currentFloor = i;
                 Debug.Log($"Floor changed: {currentFloor}");
-                OnFloorChanged?.Invoke();
+                OnFloorChanged?.Invoke(currentFloor);
             }
         }
 

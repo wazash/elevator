@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public class ElevatorButton : MonoBehaviour
+public class ElevatorButton : MonoBehaviour, IInteractable
 {
     [SerializeField] private int buttonNumber;
 
