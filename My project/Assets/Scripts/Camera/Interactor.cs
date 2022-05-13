@@ -19,9 +19,9 @@ public class Interactor : MonoBehaviour
         {
             if (Input.GetButtonDown("Fire1"))
             {
-                if (hit.collider.gameObject.TryGetComponent(out ElevatorButton button))
+                if (hit.collider.gameObject.TryGetComponent(out IInteractable interactable))
                 {
-                    button.OnInteract();
+                    interactable.OnInteract();
                 } 
             }
             
