@@ -7,9 +7,9 @@ public class ElevatorController : MonoBehaviour
 {
     [SerializeField] private int currentFloor = 0;
     [SerializeField] private Transform[] floorsPositions;
+    [SerializeField] private Doors door;
 
     private int targetFloor;
-    private Rigidbody rb;
 
     private bool isMoving = false;
 
@@ -22,7 +22,6 @@ public class ElevatorController : MonoBehaviour
     private void Awake()
     {
         ElevatorButton.OnButtonPressed += ElevatorButton_OnButtonPressed;
-        rb = GetComponent<Rigidbody>();
     }
     private void OnDestroy()
     {
@@ -57,6 +56,7 @@ public class ElevatorController : MonoBehaviour
                 {
                     Debug.Log("StopMoving");
                     OnStopMoving?.Invoke();
+                    door.OpenDoor();
                 }
                 isMoving = false;
                 currentFloor = targetFloor;
