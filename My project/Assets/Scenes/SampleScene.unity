@@ -3335,7 +3335,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 447207448}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -9.01, y: 0, z: 12.303333}
+  m_LocalPosition: {x: -9.76, y: 0, z: 12.303333}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 340041580}
@@ -6658,7 +6658,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh15740
+  m_Name: pb_Mesh15744
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -9467,6 +9467,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56c0c0dff1879d84ca6d2c89770adf71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  doorClosingDelay: 2
+  isRaising: 0
 --- !u!95 &1632306850
 Animator:
   serializedVersion: 3

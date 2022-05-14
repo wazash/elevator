@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Doors : MonoBehaviour
 {
+    [SerializeField] private ElevatorController elevator;
     [SerializeField] private float doorClosingDelay = 2f;
     private Animator animator;
 
@@ -13,6 +14,25 @@ public class Doors : MonoBehaviour
     private float blendValue;
     [SerializeField]private bool isRaising = false;
     public bool IsOpened { get { return isOpened; } set { IsOpened = value; } }
+
+    private void Awake()
+    {
+        ElevatorPanelButton.OnButtonPressed += ElevatorPanelButton_OnButtonPressed;
+    }
+    private void OnDestroy()
+    {
+        ElevatorPanelButton.OnButtonPressed -= ElevatorPanelButton_OnButtonPressed;
+    }
+
+    private void ElevatorPanelButton_OnButtonPressed(int obj)
+    {
+        if(elevator.CurrentFloor == obj)
+        {
+            return;
+        }
+
+        CloseDoor();
+    }
 
     private void Start()
     {
@@ -27,22 +47,15 @@ public class Doors : MonoBehaviour
         blendValue = Mathf.Clamp(blendValue, 0, 1);
 
         animator.SetFloat("Blend", blendValue);
-    }
-
-    // Animation event
-    public void DoorsOpened()
-    {
-        Debug.Log("DoorsOpened");
-        isOpened = true;
-        animator.SetFloat("Blend", 1);
-    }
-
-    // Animation event
-    public void DoorsClosed()
-    {
-        Debug.Log("DoorsClosed");
-        isOpened = false;
-        animator.SetFloat("Blend", 0);
+    
+        if(blendValue == 0)
+        {
+            isOpened = true;
+        }
+        else if (blendValue == 1)
+        {
+            isOpened = false;
+        }
     }
 
     public void CloseDoor()
