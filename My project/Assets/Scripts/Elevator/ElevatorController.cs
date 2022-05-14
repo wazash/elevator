@@ -21,11 +21,11 @@ public class ElevatorController : MonoBehaviour
 
     private void Awake()
     {
-        ElevatorButton.OnButtonPressed += ElevatorButton_OnButtonPressed;
+        ElevatorPanelButton.OnButtonPressed += ElevatorButton_OnButtonPressed;
     }
     private void OnDestroy()
     {
-        ElevatorButton.OnButtonPressed -= ElevatorButton_OnButtonPressed;
+        ElevatorPanelButton.OnButtonPressed -= ElevatorButton_OnButtonPressed;
     }
 
     private void ElevatorButton_OnButtonPressed(int floor)
@@ -45,7 +45,8 @@ public class ElevatorController : MonoBehaviour
 
     private void MoveElevator(int targetFloor)
     {
-        if(targetFloor < floorsPositions.Length /*&& currentFloor != targetFloor*/)
+
+        if (targetFloor < floorsPositions.Length /*&& currentFloor != targetFloor*/)
         {
             Vector3 startPos = transform.position;
             Vector3 endPos = new Vector3(transform.position.x, floorsPositions[targetFloor].position.y, transform.position.z);

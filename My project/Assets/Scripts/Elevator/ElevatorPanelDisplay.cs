@@ -10,12 +10,12 @@ public class ElevatorPanelDisplay : MonoBehaviour
 
     private void Awake()
     {
-        ElevatorButton.OnButtonPressed += ElevatorButton_OnButtonPressed;
+        ElevatorPanelButton.OnButtonPressed += ElevatorButton_OnButtonPressed;
         elevator.OnFloorChanged += Elevator_OnFloorChanged;
     }
     private void OnDestroy()
     {
-        ElevatorButton.OnButtonPressed -= ElevatorButton_OnButtonPressed;
+        ElevatorPanelButton.OnButtonPressed -= ElevatorButton_OnButtonPressed;
         elevator.OnFloorChanged -= Elevator_OnFloorChanged;
     }
     private void Start()

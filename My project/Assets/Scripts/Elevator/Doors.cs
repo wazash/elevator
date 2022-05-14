@@ -33,6 +33,7 @@ public class Doors : MonoBehaviour
     public void DoorsOpened()
     {
         Debug.Log("DoorsOpened");
+        isOpened = true;
         animator.SetFloat("Blend", 1);
     }
 
@@ -40,6 +41,7 @@ public class Doors : MonoBehaviour
     public void DoorsClosed()
     {
         Debug.Log("DoorsClosed");
+        isOpened = false;
         animator.SetFloat("Blend", 0);
     }
 
