@@ -8,8 +8,6 @@ public class Speaker : MonoBehaviour
 
     private ElevatorController elevatorController;
 
-    private bool isMovingPlaying = false;
-
     private void Awake()
     {
         elevatorController = GetComponent<ElevatorController>();
