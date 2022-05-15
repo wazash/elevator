@@ -3,10 +3,12 @@ using UnityEngine;
 
 public class ElevatorController : MonoBehaviour
 {
-    [SerializeField] private int currentFloor = 0;
-    [SerializeField] private Transform[] floorsPositions;
     [SerializeField] private Doors door;
+    [SerializeField] private Transform[] floorsPositions;
+
     [SerializeField] private float speed = 2f;
+    [SerializeField] private int currentFloor = 0;
+    public int CurrentFloor => currentFloor;
 
     private int targetFloor;
     private float movingDistanceDelta = 0.05f;
@@ -17,8 +19,6 @@ public class ElevatorController : MonoBehaviour
     public event Action<int> OnFloorChanged;
     public event Action OnStartMoving;
     public event Action OnStopMoving;
-
-    public int CurrentFloor { get { return currentFloor; } }
 
     private void Awake()
     {
@@ -51,7 +51,7 @@ public class ElevatorController : MonoBehaviour
             return;
         }
 
-        if (targetFloor < floorsPositions.Length /*&& currentFloor != targetFloor*/)
+        if (targetFloor < floorsPositions.Length)
         {
             Vector3 startPos = transform.position;
             Vector3 endPos = new Vector3(transform.position.x, floorsPositions[targetFloor].position.y, transform.position.z);
@@ -60,7 +60,6 @@ public class ElevatorController : MonoBehaviour
             {
                 if (isMoving)
                 {
-                    Debug.Log("StopMoving");
                     OnStopMoving?.Invoke();
                     door.OpenDoor();
                 }
@@ -71,7 +70,6 @@ public class ElevatorController : MonoBehaviour
             {
                 if (!isMoving)
                 {
-                    Debug.Log("StartMoving");
                     OnStartMoving?.Invoke();
                 }
                 isMoving = true;
