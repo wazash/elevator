@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Doors : MonoBehaviour
@@ -30,7 +29,7 @@ public class Doors : MonoBehaviour
 
     private void ElevatorPanelButton_OnButtonPressed(int obj)
     {
-        if(elevator.CurrentFloor == obj)
+        if (elevator.CurrentFloor == obj)
         {
             return;
         }
@@ -51,8 +50,8 @@ public class Doors : MonoBehaviour
         blendValue = Mathf.Clamp(blendValue, 0, 1);
 
         animator.SetFloat("Blend", blendValue);
-    
-        if(blendValue == 0)
+
+        if (blendValue == 0)
         {
             isOpened = true;
         }

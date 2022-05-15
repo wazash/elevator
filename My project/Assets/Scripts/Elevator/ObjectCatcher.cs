@@ -1,11 +1,8 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ObjectCatcher : MonoBehaviour
 {
-    [SerializeField] GameObject parent;
+    [SerializeField] private GameObject parent;
 
     private void OnTriggerEnter(Collider other)
     {

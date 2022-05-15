@@ -1,6 +1,4 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ElevatorController : MonoBehaviour
@@ -19,7 +17,7 @@ public class ElevatorController : MonoBehaviour
     public event Action<int> OnFloorChanged;
     public event Action OnStartMoving;
     public event Action OnStopMoving;
-     
+
     public int CurrentFloor { get { return currentFloor; } }
 
     private void Awake()
@@ -58,7 +56,7 @@ public class ElevatorController : MonoBehaviour
             Vector3 startPos = transform.position;
             Vector3 endPos = new Vector3(transform.position.x, floorsPositions[targetFloor].position.y, transform.position.z);
 
-            if(transform.position == endPos)
+            if (transform.position == endPos)
             {
                 if (isMoving)
                 {
