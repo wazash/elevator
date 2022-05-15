@@ -8,15 +8,12 @@ public class Doors : MonoBehaviour
     [SerializeField] private bool isRaising = false;
 
     private Animator animator;
-
     private float blendValue;
 
     private bool isOpened = false;
-    //public bool IsOpened { get { return isOpened; } set { IsOpened = value; } }
     public bool IsOpened => isOpened;
 
     private bool isObjectBetween;
-
 
     private void Awake()
     {
@@ -53,11 +50,11 @@ public class Doors : MonoBehaviour
 
         if (blendValue == 0)
         {
-            isOpened = true;
+            isOpened = false;
         }
         else if (blendValue == 1)
         {
-            isOpened = false;
+            isOpened = true;
         }
     }
 

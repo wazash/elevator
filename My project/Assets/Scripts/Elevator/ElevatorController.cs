@@ -46,7 +46,7 @@ public class ElevatorController : MonoBehaviour
 
     private void MoveElevator(int targetFloor)
     {
-        if (!door.IsOpened)
+        if (door.IsOpened)
         {
             return;
         }
