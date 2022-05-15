@@ -6,14 +6,18 @@ public class Doors : MonoBehaviour
 {
     [SerializeField] private ElevatorController elevator;
     [SerializeField] private float doorClosingDelay = 2f;
+    [SerializeField] private bool isRaising = false;
+
     private Animator animator;
 
+    private float blendValue;
+
     private bool isOpened = false;
+    //public bool IsOpened { get { return isOpened; } set { IsOpened = value; } }
+    public bool IsOpened => isOpened;
+
     private bool isObjectBetween;
 
-    private float blendValue;
-    [SerializeField]private bool isRaising = false;
-    public bool IsOpened { get { return isOpened; } set { IsOpened = value; } }
 
     private void Awake()
     {
