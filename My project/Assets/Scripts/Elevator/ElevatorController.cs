@@ -87,7 +87,6 @@ public class ElevatorController : MonoBehaviour
             if (Mathf.Abs(floorOffset) < 0.1f && currentFloor != i)
             {
                 currentFloor = i;
-                Debug.Log($"Floor changed: {currentFloor}");
                 OnFloorChanged?.Invoke(currentFloor);
             }
         }
