@@ -92,7 +92,10 @@ public class Doors : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            OpenDoor();
+            if (!isRaising)
+            {
+                OpenDoor();
+            }
         }
     }
 
