@@ -9,7 +9,6 @@ public class DoorsButton : MonoBehaviour, IInteractable
 
     public void OnInteract()
     {
-        //ChangeDoorStatus();
         OnButtonClicked?.Invoke();
     }
 
