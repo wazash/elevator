@@ -1969,6 +1969,7 @@ GameObject:
   - component: {fileID: 447207449}
   - component: {fileID: 447207454}
   - component: {fileID: 447207455}
+  - component: {fileID: 447207456}
   m_Layer: 0
   m_Name: Elevator
   m_TagString: Untagged
@@ -3493,7 +3494,7 @@ MonoBehaviour:
   - {fileID: 1810122162}
   - {fileID: 1047756562}
   door: {fileID: 1632306849}
-  speed: 2
+  speed: 1
 --- !u!54 &447207455
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3510,6 +3511,22 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 122
   m_CollisionDetection: 0
+--- !u!114 &447207456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 447207448}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c0ef1e1b4bd71f42a46758b88038664, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startSFX: {fileID: 8300000, guid: 8cd66015f737dad498bf8d440f44243a, type: 3}
+  stopSFX: {fileID: 8300000, guid: f1553a04cac926b4a832c0f803e2dd3b, type: 3}
+  movingSFX: {fileID: 8300000, guid: 05a79f6ba6c10c44ab78e2a40f0bbbde, type: 3}
+  audioSource: {fileID: 8400646}
 --- !u!1 &473536348
 GameObject:
   m_ObjectHideFlags: 0
