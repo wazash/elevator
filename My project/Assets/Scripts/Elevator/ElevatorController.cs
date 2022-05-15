@@ -14,6 +14,7 @@ public class ElevatorController : MonoBehaviour
     private float movingDistanceDelta = 0.05f;
 
     private bool isMoving = false;
+    public bool IsMoving => isMoving;
 
     public event Action<int> OnFloorChanged;
     public event Action OnStartMoving;
