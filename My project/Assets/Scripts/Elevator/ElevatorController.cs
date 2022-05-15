@@ -8,8 +8,10 @@ public class ElevatorController : MonoBehaviour
     [SerializeField] private int currentFloor = 0;
     [SerializeField] private Transform[] floorsPositions;
     [SerializeField] private Doors door;
+    [SerializeField] private float speed = 2f;
 
     private int targetFloor;
+    private float movingDistanceDelta = 0.05f;
 
     private bool isMoving = false;
 
@@ -74,7 +76,7 @@ public class ElevatorController : MonoBehaviour
                     OnStartMoving?.Invoke();
                 }
                 isMoving = true;
-                transform.position = Vector3.MoveTowards(startPos, endPos, .05f);
+                transform.position = Vector3.MoveTowards(startPos, endPos, movingDistanceDelta * speed);
             }
         }
     }
