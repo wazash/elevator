@@ -8,6 +8,7 @@ public class Speaker : MonoBehaviour
 
     private ElevatorController elevatorController;
 
+    #region INITIALIZATION AND EVENTS
     private void Awake()
     {
         elevatorController = GetComponent<ElevatorController>();
@@ -28,14 +29,15 @@ public class Speaker : MonoBehaviour
     {
         StartCoroutine(PlayStopSFX());
     }
+    #endregion
 
+    #region METHODS
     private void PlayStartSFX()
     {
+        audioSource.Stop();
         audioSource.PlayOneShot(startSFX);
 
-        audioSource.clip = movingSFX;
-        audioSource.loop = true;
-        audioSource.PlayDelayed(startSFX.length);
+        PlayMovingMusic(movingSFX, startSFX.length);
     }
     private IEnumerator PlayStopSFX()
     {
@@ -43,6 +45,13 @@ public class Speaker : MonoBehaviour
         audioSource.PlayOneShot(stopSFX);
 
         yield return new WaitForSeconds(stopSFX.length);
-        StopAllCoroutines();
     }
+
+    private void PlayMovingMusic(AudioClip clip, float delay)
+    {
+        audioSource.clip = clip;
+        audioSource.loop = true;
+        audioSource.PlayDelayed(delay);
+    } 
+    #endregion
 }
