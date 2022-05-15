@@ -15,6 +15,5 @@ public class ElevatorPanelButton : MonoBehaviour, IInteractable
     private void ButtonPressed(int number)
     {
         OnButtonPressed?.Invoke(number);
-        Debug.Log($"Button {number} pressed");
     }
 }
