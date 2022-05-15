@@ -5,7 +5,7 @@ public class Doors : MonoBehaviour
 {
     [SerializeField] private ElevatorController elevator;
     [SerializeField] private float doorClosingDelay = 2f;
-    [SerializeField] private bool isRaising = false;
+    [SerializeField] private bool isOpening = false;
 
     private Animator animator;
     private float blendValue;
@@ -43,7 +43,7 @@ public class Doors : MonoBehaviour
 
     private void Update()
     {
-        blendValue = isRaising ? blendValue += Time.deltaTime : blendValue -= Time.deltaTime;
+        blendValue = isOpening ? blendValue += Time.deltaTime : blendValue -= Time.deltaTime;
         blendValue = Mathf.Clamp(blendValue, 0, 1);
 
         animator.SetFloat("Blend", blendValue);
@@ -65,7 +65,7 @@ public class Doors : MonoBehaviour
             Debug.LogWarning("Something is blocking door");
             return;
         }
-        isRaising = false;
+        isOpening = false;
     }
     private IEnumerator CloseDoorWithDelay(float delay)
     {
@@ -76,7 +76,7 @@ public class Doors : MonoBehaviour
 
     public void OpenDoor()
     {
-        isRaising = true;
+        isOpening = true;
     }
 
 
@@ -92,7 +92,7 @@ public class Doors : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            if (isRaising)
+            if (isOpening)
             {
                 return;
             }
