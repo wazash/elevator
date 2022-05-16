@@ -6,6 +6,9 @@ public class Interactor : MonoBehaviour
     [SerializeField] private float range = 2f;
     private Camera mainCamera;
 
+    private bool canInteract;
+    public bool CanInteract => canInteract;
+
     private void Start()
     {
         mainCamera = Camera.main;
@@ -17,6 +20,8 @@ public class Interactor : MonoBehaviour
 
         if (Physics.Raycast(mainCamera.transform.position, mainCamera.transform.forward, out hit, range, interactableLayer))
         {
+            canInteract = true;
+
             if (Input.GetButtonDown("Fire1"))
             {
                 if (hit.collider.gameObject.TryGetComponent(out IInteractable interactable))
@@ -25,6 +30,10 @@ public class Interactor : MonoBehaviour
                 } 
             }
             
+        }
+        else
+        {
+            canInteract = false;
         }
     }
 }
