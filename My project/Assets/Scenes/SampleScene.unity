@@ -590,6 +590,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonNumber: 2
+  isActive: 0
 --- !u!43 &103980728
 Mesh:
   m_ObjectHideFlags: 0
@@ -4559,6 +4560,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonNumber: 3
+  isActive: 0
 --- !u!65 &498834281
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7618,6 +7620,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonNumber: 1
+  isActive: 0
 --- !u!65 &617684471
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8814,6 +8817,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonNumber: 2
+  isActive: 0
 --- !u!65 &803293684
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12258,6 +12262,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonNumber: 5
+  isActive: 0
 --- !u!65 &953133183
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15007,6 +15012,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonNumber: 5
+  isActive: 1
 --- !u!43 &1232262850
 Mesh:
   m_ObjectHideFlags: 0
@@ -15995,6 +16001,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonNumber: 1
+  isActive: 0
 --- !u!65 &1369093899
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16104,6 +16111,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonNumber: 0
+  isActive: 0
 --- !u!65 &1424069018
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23065,6 +23073,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonNumber: 3
+  isActive: 1
 --- !u!1 &1533205563
 GameObject:
   m_ObjectHideFlags: 0
@@ -23284,6 +23293,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonNumber: 2
+  isActive: 0
 --- !u!65 &1584829428
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25942,6 +25952,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonNumber: 0
+  isActive: 1
 --- !u!1 &1932090340
 GameObject:
   m_ObjectHideFlags: 0
@@ -28337,6 +28348,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonNumber: 4
+  isActive: 1
 --- !u!1 &2047079536
 GameObject:
   m_ObjectHideFlags: 0
@@ -28384,6 +28396,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonNumber: 4
+  isActive: 0
 --- !u!65 &2047079539
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -28935,6 +28948,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttonNumber: 1
+  isActive: 1
 --- !u!1 &2131862926
 GameObject:
   m_ObjectHideFlags: 0
