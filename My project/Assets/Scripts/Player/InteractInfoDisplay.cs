@@ -8,13 +8,11 @@ public class InteractInfoDisplay : MonoBehaviour
     [SerializeField] private Interactor interactor;
     [SerializeField] private TMP_Text text;
 
-    private const string INFO_TEXT = "LMB to interact";
-
     private void Update()
     {
         if (interactor.CanInteract)
         {
-            text.text = INFO_TEXT;
+            text.text = $"LMB to {interactor.InteractableInfo}";
         }
         else
         {

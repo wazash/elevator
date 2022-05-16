@@ -7,10 +7,11 @@ public class DoorsButton : MonoBehaviour, IInteractable
 
     public UnityEvent OnButtonClicked;
 
+    [SerializeField] private string info;
+    public string Info => info;
+
     public void OnInteract()
     {
         OnButtonClicked?.Invoke();
     }
-
-
 }

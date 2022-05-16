@@ -596,6 +596,7 @@ MonoBehaviour:
     active: {r: 0.47759274, g: 1, b: 0.41037738, a: 1}
     inactive: {r: 1, g: 0.28773582, b: 0.28773582, a: 1}
     standard: {r: 0.56817377, g: 0.83518875, b: 0.9056604, a: 1}
+  info: Go to floor 2
 --- !u!1 &105978860
 GameObject:
   m_ObjectHideFlags: 0
@@ -2171,12 +2172,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 447207453}
+  - component: {fileID: 447207455}
   - component: {fileID: 447207452}
   - component: {fileID: 447207451}
   - component: {fileID: 447207450}
   - component: {fileID: 447207449}
   - component: {fileID: 447207454}
-  - component: {fileID: 447207455}
   - component: {fileID: 447207456}
   m_Layer: 0
   m_Name: Elevator
@@ -4191,6 +4192,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  info: Close door
 --- !u!43 &496753924
 Mesh:
   m_ObjectHideFlags: 0
@@ -4408,6 +4410,7 @@ MonoBehaviour:
     active: {r: 0.47759274, g: 1, b: 0.41037738, a: 1}
     inactive: {r: 1, g: 0.28773582, b: 0.28773582, a: 1}
     standard: {r: 0.56817377, g: 0.83518875, b: 0.9056604, a: 1}
+  info: Call elevator
 --- !u!65 &498834281
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7473,6 +7476,7 @@ MonoBehaviour:
     active: {r: 0, g: 0, b: 0, a: 0}
     inactive: {r: 0, g: 0, b: 0, a: 0}
     standard: {r: 0, g: 0, b: 0, a: 0}
+  info: 
 --- !u!65 &617684471
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8824,6 +8828,7 @@ MonoBehaviour:
     active: {r: 0.47759274, g: 1, b: 0.41037738, a: 1}
     inactive: {r: 1, g: 0.28773582, b: 0.28773582, a: 1}
     standard: {r: 0.56817377, g: 0.83518875, b: 0.9056604, a: 1}
+  info: Call elevator
 --- !u!65 &803293684
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12274,6 +12279,7 @@ MonoBehaviour:
     active: {r: 0.47759274, g: 1, b: 0.41037738, a: 1}
     inactive: {r: 1, g: 0.28773582, b: 0.28773582, a: 1}
     standard: {r: 0.56817377, g: 0.83518875, b: 0.9056604, a: 1}
+  info: Call elevator
 --- !u!65 &953133183
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13943,6 +13949,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  info: Open door
 --- !u!1 &1066762199
 GameObject:
   m_ObjectHideFlags: 0
@@ -14913,6 +14920,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  info: Open door
 --- !u!1 &1181881145
 GameObject:
   m_ObjectHideFlags: 0
@@ -15029,6 +15037,7 @@ MonoBehaviour:
     active: {r: 0.47759274, g: 1, b: 0.41037738, a: 1}
     inactive: {r: 1, g: 0.28773582, b: 0.28773582, a: 1}
     standard: {r: 0.56817377, g: 0.83518875, b: 0.9056604, a: 1}
+  info: Go to floor 5
 --- !u!43 &1232262850
 Mesh:
   m_ObjectHideFlags: 0
@@ -16023,6 +16032,7 @@ MonoBehaviour:
     active: {r: 0.47759274, g: 1, b: 0.41037738, a: 1}
     inactive: {r: 1, g: 0.28773582, b: 0.28773582, a: 1}
     standard: {r: 0.56817377, g: 0.83518875, b: 0.9056604, a: 1}
+  info: Call elevator
 --- !u!65 &1369093899
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16138,6 +16148,7 @@ MonoBehaviour:
     active: {r: 0.47759274, g: 1, b: 0.41037738, a: 1}
     inactive: {r: 1, g: 0.28773582, b: 0.28773582, a: 1}
     standard: {r: 0.56817377, g: 0.83518875, b: 0.9056604, a: 1}
+  info: Call elevator
 --- !u!65 &1424069018
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23105,6 +23116,7 @@ MonoBehaviour:
     active: {r: 0.47759274, g: 1, b: 0.41037738, a: 1}
     inactive: {r: 1, g: 0.28773582, b: 0.28773582, a: 1}
     standard: {r: 0.56817377, g: 0.83518875, b: 0.9056604, a: 1}
+  info: Go to floor 3
 --- !u!1 &1533205563
 GameObject:
   m_ObjectHideFlags: 0
@@ -23330,6 +23342,7 @@ MonoBehaviour:
     active: {r: 0, g: 0, b: 0, a: 0}
     inactive: {r: 0, g: 0, b: 0, a: 0}
     standard: {r: 0, g: 0, b: 0, a: 0}
+  info: 
 --- !u!65 &1584829428
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26010,6 +26023,7 @@ MonoBehaviour:
     active: {r: 0.47759274, g: 1, b: 0.41037738, a: 1}
     inactive: {r: 1, g: 0.28773582, b: 0.28773582, a: 1}
     standard: {r: 0.56817377, g: 0.83518875, b: 0.9056604, a: 1}
+  info: Go to floor 0
 --- !u!1 &1932090340
 GameObject:
   m_ObjectHideFlags: 0
@@ -28411,6 +28425,7 @@ MonoBehaviour:
     active: {r: 0.47759274, g: 1, b: 0.41037738, a: 1}
     inactive: {r: 1, g: 0.28773582, b: 0.28773582, a: 1}
     standard: {r: 0.56817377, g: 0.83518875, b: 0.9056604, a: 1}
+  info: Go to floor 4
 --- !u!1 &2047079536
 GameObject:
   m_ObjectHideFlags: 0
@@ -28464,6 +28479,7 @@ MonoBehaviour:
     active: {r: 0.47759274, g: 1, b: 0.41037738, a: 1}
     inactive: {r: 1, g: 0.28773582, b: 0.28773582, a: 1}
     standard: {r: 0.56817377, g: 0.83518875, b: 0.9056604, a: 1}
+  info: Call elevator
 --- !u!65 &2047079539
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -29185,6 +29201,7 @@ MonoBehaviour:
     active: {r: 0.47759274, g: 1, b: 0.41037738, a: 1}
     inactive: {r: 1, g: 0.28773582, b: 0.28773582, a: 1}
     standard: {r: 0.56817377, g: 0.83518875, b: 0.9056604, a: 1}
+  info: Go to floor 1
 --- !u!1 &2131862926
 GameObject:
   m_ObjectHideFlags: 0

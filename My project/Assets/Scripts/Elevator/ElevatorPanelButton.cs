@@ -13,6 +13,9 @@ public class ElevatorPanelButton : MonoBehaviour, IInteractable
 
     private MeshRenderer meshRenderer;
 
+    [SerializeField] private string info;
+    public string Info { get => info; }
+
     public static event Action<int> OnButtonPressed;
 
     private void Awake()

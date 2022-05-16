@@ -8,6 +8,8 @@ public class Interactor : MonoBehaviour
 
     private bool canInteract;
     public bool CanInteract => canInteract;
+    private string interactableInfo;
+    public string InteractableInfo => interactableInfo;
 
     private void Start()
     {
@@ -20,16 +22,15 @@ public class Interactor : MonoBehaviour
 
         if (Physics.Raycast(mainCamera.transform.position, mainCamera.transform.forward, out hit, range, interactableLayer))
         {
-            canInteract = true;
-
-            if (Input.GetButtonDown("Fire1"))
+            if(hit.collider.gameObject.TryGetComponent(out IInteractable interactable))
             {
-                if (hit.collider.gameObject.TryGetComponent(out IInteractable interactable))
+                canInteract = true;
+                interactableInfo = interactable.Info;
+                if (Input.GetButtonDown("Fire1"))
                 {
                     interactable.OnInteract();
-                } 
-            }
-            
+                }
+            }            
         }
         else
         {
