@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class ElevatorPanelButton : MonoBehaviour, IInteractable
 {
+    [SerializeField] private ElevatorController controller;
+
     [SerializeField] private int buttonNumber;
     [SerializeField] private bool isActive = true;
 
@@ -13,9 +15,25 @@ public class ElevatorPanelButton : MonoBehaviour, IInteractable
 
     public static event Action<int> OnButtonPressed;
 
+    private void Awake()
+    {
+        controller.OnStopMoving += Controller_OnStopMoving;
+    }
+    private void OnDestroy()
+    {
+        controller.OnStopMoving -= Controller_OnStopMoving;
+    }
+
+    private void Controller_OnStopMoving()
+    {
+        ChangeButtonColor(color.Standard);
+    }
+
     private void Start()
     {
         meshRenderer = GetComponent<MeshRenderer>();
+
+        ChangeButtonColor(color.Standard);
     }
 
     public void OnInteract()
